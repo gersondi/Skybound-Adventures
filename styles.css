@@ -1,0 +1,20 @@
+/* Reset margins and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+/* Game container styling */
+#game-container {
+  margin: 0 auto;
+  width: 800px;
+  height: 600px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
