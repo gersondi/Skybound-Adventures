@@ -47,21 +47,22 @@ function create() {
   player.setBounce(0.2); // Add bounce effect
   player.setCollideWorldBounds(true); // Prevent player from leaving the world
 
-  // Enable keyboard input
-  cursors = this.input.keyboard.createCursorKeys();
-
   // Enable collision between player and platforms
   this.physics.add.collider(player, platforms);
+
+  // Enable keyboard input for controls
+  cursors = this.input.keyboard.createCursorKeys();
 }
 
 function update() {
+  // Reset horizontal velocity
+  player.setVelocityX(0);
+
   // Player movement
   if (cursors.left.isDown) {
     player.setVelocityX(-160); // Move left
   } else if (cursors.right.isDown) {
     player.setVelocityX(160); // Move right
-  } else {
-    player.setVelocityX(0); // Stop moving
   }
 
   // Jumping
